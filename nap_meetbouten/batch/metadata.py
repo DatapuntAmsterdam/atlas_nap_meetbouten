@@ -12,7 +12,7 @@ log = logging.getLogger(__name__)
 def upload(dataset_id, year, month, day):
     # TODO: should fail if this method is called without having a URL
     if METADATA_URL is None or len(METADATA_URL) == 0:
-        log.warn("METADATA_URL is not set, won't upload dataset modification "
+        log.warning("METADATA_URL is not set, won't upload dataset modification "
                  "date. This should only happen during tests!")
         return
 

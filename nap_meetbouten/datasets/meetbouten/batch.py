@@ -172,7 +172,7 @@ class ImportMetingTask(batch.BasicTask):
             return
         meetbout_id = row[5]
         if meetbout_id not in self.meetbouten:
-            log.warn(
+            log.warning(
                 "Meting %s references non-existing meetbout %s; skipping",
                 pk, meetbout_id)
             return
